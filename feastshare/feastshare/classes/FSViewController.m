@@ -11,6 +11,7 @@
 #import "FSContentChooserViewController.h"
 #import "FSMessageWriterViewController.h"
 #import "FSMessageViewerViewController.h"
+#import "FSConstants.h"
 
 @interface FSViewController ()
 
@@ -26,12 +27,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-	
+
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(recipientChosen:) name:FSEvent_RecipientChosen object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(contentChosen:) name:FSEvent_ContentChosen object:nil];
+
 	self.recipientChooserVC = [[FSRecipientChooserViewController alloc] initWithNibName:nil bundle:nil];
 	
 	[self.contentView addSubview:[self.recipientChooserVC view]];
-	
+	[self addChildViewController:self.recipientChooserVC];
+	[self.recipientChooserVC didMoveToParentViewController:self];
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,8 +44,33 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)selectRecipient:(NSString *)recipient
+- (void)recipientChosen:(NSNotification *)n
 {
+	NSLog(@"%s", __FUNCTION__);
+	
+	if (self.contentChooserVC) {
+		self.contentChooserVC = [[FSContentChooserViewController alloc] initWithNibName:nil bundle:nil];
+	}
+	
+//	[self addChildViewController:self.contentChooserVC];
+//	[self transitionFromViewController:self.recipientChooserVC
+//					  toViewController:self.contentChooserVC
+//							  duration:0.5f
+//							   options:UIViewAnimationOptionTransitionCrossDissolve
+//							animations:^{
+//								//[self.recipientChooserVC.view removeFromSuperview];
+//								//[self.contentView addSubview:[self.contentChooserVC view]];
+//							}
+//							completion:^(BOOL finished) {
+//								//[self.contentChooserVC didMoveToParentViewController:self];
+//								//[self.recipientChooserVC removeFromParentViewController];
+//							}];
+	
+}
+
+- (void)contentChosen:(NSNotification *)n
+{
+	NSLog(@"%s", __FUNCTION__);
 	
 }
 

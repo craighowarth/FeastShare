@@ -57,6 +57,7 @@
 		442472E0161E311900756CC3 /* FSRecipientChooserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSRecipientChooserViewController.h; sourceTree = "<group>"; };
 		442472E1161E311900756CC3 /* FSRecipientChooserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSRecipientChooserViewController.m; sourceTree = "<group>"; };
 		442472E2161E311900756CC3 /* FSRecipientChooserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSRecipientChooserViewController.xib; sourceTree = "<group>"; };
+		442472E9161E376F00756CC3 /* FSConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSConstants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +125,7 @@
 		442472C1161E2CB100756CC3 /* classes */ = {
 			isa = PBXGroup;
 			children = (
+				442472E9161E376F00756CC3 /* FSConstants.h */,
 				442472C2161E2CB100756CC3 /* FSAppDelegate.h */,
 				442472C3161E2CB100756CC3 /* FSAppDelegate.m */,
 				442472C4161E2CB100756CC3 /* FSViewController.h */,

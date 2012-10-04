@@ -6,8 +6,8 @@
 //  Copyright (c) 2012 Feast. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 @interface FSRecipientChooserViewController : UIViewController
+
+@property (nonatomic, strong) IBOutlet UITableView *recipientTableView;
 
 @end
