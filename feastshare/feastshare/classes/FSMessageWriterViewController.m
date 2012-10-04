@@ -24,13 +24,16 @@
 }
 
 -(void)postImage:(UIImage*)image withMessage:(NSString*)message toReceiver:(NSString*)receiverHash{
+    NSData *imageData = UIImagePNGRepresentation(image);
+    PFFile *imageFile = [PFFile fileWithName:@"image.png" data:imageData];
+    [imageFile save];
+    
     PFObject *gameScore = [PFObject objectWithClassName:@"Post"];
     [gameScore setObject:receiverHash forKey:@"receiverHash"];
     [gameScore setObject:[PFUser currentUser] forKey:@"senderHash"];
     [gameScore setObject:message forKey:@"message"];
-    [gameScore setObject:image forKey:@"image"];
+    [gameScore setObject:imageFile forKey:@"image"];
     [gameScore save];
-
 }
 
 - (void)viewDidLoad
