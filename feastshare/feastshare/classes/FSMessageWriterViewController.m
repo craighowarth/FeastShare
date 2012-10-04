@@ -28,12 +28,12 @@
     PFFile *imageFile = [PFFile fileWithName:@"image.png" data:imageData];
     [imageFile save];
     
-    PFObject *gameScore = [PFObject objectWithClassName:@"Post"];
-    [gameScore setObject:receiverHash forKey:@"receiverHash"];
-    [gameScore setObject:[PFUser currentUser] forKey:@"senderHash"];
-    [gameScore setObject:message forKey:@"message"];
-    [gameScore setObject:imageFile forKey:@"image"];
-    [gameScore save];
+    PFObject *post = [PFObject objectWithClassName:@"Post"];
+    [post setObject:receiverHash forKey:@"receiverHash"];
+    [post setObject:[PFUser currentUser] forKey:@"senderHash"];
+    [post setObject:message forKey:@"message"];
+    [post setObject:imageFile forKey:@"image"];
+    [post save];
 }
 
 - (void)viewDidLoad
