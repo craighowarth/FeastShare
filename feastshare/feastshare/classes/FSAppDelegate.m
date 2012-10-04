@@ -6,19 +6,40 @@
 //  Copyright (c) 2012 Feast. All rights reserved.
 //
 
+#import "Parse/Parse.h"
 #import "FSAppDelegate.h"
-
 #import "FSViewController.h"
 
 @implementation FSAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    [Parse setApplicationId:@"YMwFqD1Gw49An91z6hJzFcMsRGwlE5zgt0NyRumw"
+                  clientKey:@"PhQmB5llKUbD0yRqMUlwD40RAN1IhBB3FhCGOq6X"];
+    
+    [PFUser enableAutomaticUser];
+    
+    PFACL *defaultACL = [PFACL ACL];
+    
+    // If you would like all objects to be private by default, remove this line.
+    [defaultACL setPublicReadAccess:YES];
+    
+    [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
+    
+    // Override point for customization after application launch.
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
 	self.viewController = [[FSViewController alloc] initWithNibName:@"FSViewController" bundle:nil];
 	self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+    
+    
+    [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge|
+     UIRemoteNotificationTypeAlert|
+     UIRemoteNotificationTypeSound];
+
     return YES;
 }
 
