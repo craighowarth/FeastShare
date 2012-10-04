@@ -1,5 +1,5 @@
 //
-//  FSViewController.h
+//  FSMessageWriterViewController.h
 //  feastshare
 //
 //  Created by Craig Howarth on 10/4/12.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FSViewController : UIViewController
+@interface FSMessageWriterViewController : UIViewController
 
 @end

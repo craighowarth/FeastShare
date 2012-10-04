@@ -12,12 +12,20 @@
 		442472A3161E28CE00756CC3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 442472A2161E28CE00756CC3 /* CoreGraphics.framework */; };
 		442472A9161E28CE00756CC3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 442472A7161E28CE00756CC3 /* InfoPlist.strings */; };
 		442472AB161E28CE00756CC3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 442472AA161E28CE00756CC3 /* main.m */; };
-		442472AF161E28CE00756CC3 /* FSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 442472AE161E28CE00756CC3 /* FSAppDelegate.m */; };
-		442472B1161E28CE00756CC3 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 442472B0161E28CE00756CC3 /* Default.png */; };
-		442472B3161E28CE00756CC3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 442472B2161E28CE00756CC3 /* Default@2x.png */; };
-		442472B5161E28CE00756CC3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 442472B4161E28CE00756CC3 /* Default-568h@2x.png */; };
-		442472B8161E28CE00756CC3 /* FSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 442472B7161E28CE00756CC3 /* FSViewController.m */; };
-		442472BB161E28CE00756CC3 /* FSViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 442472B9161E28CE00756CC3 /* FSViewController.xib */; };
+		442472C6161E2CB100756CC3 /* FSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 442472C3161E2CB100756CC3 /* FSAppDelegate.m */; };
+		442472C7161E2CB100756CC3 /* FSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 442472C5161E2CB100756CC3 /* FSViewController.m */; };
+		442472C9161E2D0600756CC3 /* FSViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 442472C8161E2D0600756CC3 /* FSViewController.xib */; };
+		442472CE161E2D1800756CC3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 442472CB161E2D1800756CC3 /* Default-568h@2x.png */; };
+		442472CF161E2D1800756CC3 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 442472CC161E2D1800756CC3 /* Default.png */; };
+		442472D0161E2D1800756CC3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 442472CD161E2D1800756CC3 /* Default@2x.png */; };
+		442472D4161E2D3600756CC3 /* FSContentChooserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 442472D2161E2D3600756CC3 /* FSContentChooserViewController.m */; };
+		442472D5161E2D3600756CC3 /* FSContentChooserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 442472D3161E2D3600756CC3 /* FSContentChooserViewController.xib */; };
+		442472D9161E2D5400756CC3 /* FSMessageWriterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 442472D7161E2D5400756CC3 /* FSMessageWriterViewController.m */; };
+		442472DA161E2D5400756CC3 /* FSMessageWriterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 442472D8161E2D5400756CC3 /* FSMessageWriterViewController.xib */; };
+		442472DE161E2D7F00756CC3 /* FSMessageViewerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 442472DC161E2D7F00756CC3 /* FSMessageViewerViewController.m */; };
+		442472DF161E2D7F00756CC3 /* FSMessageViewerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 442472DD161E2D7F00756CC3 /* FSMessageViewerViewController.xib */; };
+		442472E3161E311900756CC3 /* FSRecipientChooserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 442472E1161E311900756CC3 /* FSRecipientChooserViewController.m */; };
+		442472E4161E311900756CC3 /* FSRecipientChooserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 442472E2161E311900756CC3 /* FSRecipientChooserViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,14 +37,26 @@
 		442472A8161E28CE00756CC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		442472AA161E28CE00756CC3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		442472AC161E28CE00756CC3 /* feastshare-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "feastshare-Prefix.pch"; sourceTree = "<group>"; };
-		442472AD161E28CE00756CC3 /* FSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSAppDelegate.h; sourceTree = "<group>"; };
-		442472AE161E28CE00756CC3 /* FSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSAppDelegate.m; sourceTree = "<group>"; };
-		442472B0161E28CE00756CC3 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		442472B2161E28CE00756CC3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		442472B4161E28CE00756CC3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		442472B6161E28CE00756CC3 /* FSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSViewController.h; sourceTree = "<group>"; };
-		442472B7161E28CE00756CC3 /* FSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSViewController.m; sourceTree = "<group>"; };
-		442472BA161E28CE00756CC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FSViewController.xib; sourceTree = "<group>"; };
+		442472C2161E2CB100756CC3 /* FSAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSAppDelegate.h; sourceTree = "<group>"; };
+		442472C3161E2CB100756CC3 /* FSAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSAppDelegate.m; sourceTree = "<group>"; };
+		442472C4161E2CB100756CC3 /* FSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSViewController.h; sourceTree = "<group>"; };
+		442472C5161E2CB100756CC3 /* FSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSViewController.m; sourceTree = "<group>"; };
+		442472C8161E2D0600756CC3 /* FSViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSViewController.xib; sourceTree = "<group>"; };
+		442472CB161E2D1800756CC3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		442472CC161E2D1800756CC3 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		442472CD161E2D1800756CC3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		442472D1161E2D3600756CC3 /* FSContentChooserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSContentChooserViewController.h; sourceTree = "<group>"; };
+		442472D2161E2D3600756CC3 /* FSContentChooserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSContentChooserViewController.m; sourceTree = "<group>"; };
+		442472D3161E2D3600756CC3 /* FSContentChooserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSContentChooserViewController.xib; sourceTree = "<group>"; };
+		442472D6161E2D5400756CC3 /* FSMessageWriterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSMessageWriterViewController.h; sourceTree = "<group>"; };
+		442472D7161E2D5400756CC3 /* FSMessageWriterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSMessageWriterViewController.m; sourceTree = "<group>"; };
+		442472D8161E2D5400756CC3 /* FSMessageWriterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSMessageWriterViewController.xib; sourceTree = "<group>"; };
+		442472DB161E2D7F00756CC3 /* FSMessageViewerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSMessageViewerViewController.h; sourceTree = "<group>"; };
+		442472DC161E2D7F00756CC3 /* FSMessageViewerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSMessageViewerViewController.m; sourceTree = "<group>"; };
+		442472DD161E2D7F00756CC3 /* FSMessageViewerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSMessageViewerViewController.xib; sourceTree = "<group>"; };
+		442472E0161E311900756CC3 /* FSRecipientChooserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSRecipientChooserViewController.h; sourceTree = "<group>"; };
+		442472E1161E311900756CC3 /* FSRecipientChooserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSRecipientChooserViewController.m; sourceTree = "<group>"; };
+		442472E2161E311900756CC3 /* FSRecipientChooserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSRecipientChooserViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,11 +103,8 @@
 		442472A4161E28CE00756CC3 /* feastshare */ = {
 			isa = PBXGroup;
 			children = (
-				442472AD161E28CE00756CC3 /* FSAppDelegate.h */,
-				442472AE161E28CE00756CC3 /* FSAppDelegate.m */,
-				442472B6161E28CE00756CC3 /* FSViewController.h */,
-				442472B7161E28CE00756CC3 /* FSViewController.m */,
-				442472B9161E28CE00756CC3 /* FSViewController.xib */,
+				442472C1161E2CB100756CC3 /* classes */,
+				442472CA161E2D1800756CC3 /* images */,
 				442472A5161E28CE00756CC3 /* Supporting Files */,
 			);
 			path = feastshare;
@@ -100,11 +117,42 @@
 				442472A7161E28CE00756CC3 /* InfoPlist.strings */,
 				442472AA161E28CE00756CC3 /* main.m */,
 				442472AC161E28CE00756CC3 /* feastshare-Prefix.pch */,
-				442472B0161E28CE00756CC3 /* Default.png */,
-				442472B2161E28CE00756CC3 /* Default@2x.png */,
-				442472B4161E28CE00756CC3 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		442472C1161E2CB100756CC3 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				442472C2161E2CB100756CC3 /* FSAppDelegate.h */,
+				442472C3161E2CB100756CC3 /* FSAppDelegate.m */,
+				442472C4161E2CB100756CC3 /* FSViewController.h */,
+				442472C5161E2CB100756CC3 /* FSViewController.m */,
+				442472C8161E2D0600756CC3 /* FSViewController.xib */,
+				442472E0161E311900756CC3 /* FSRecipientChooserViewController.h */,
+				442472E1161E311900756CC3 /* FSRecipientChooserViewController.m */,
+				442472E2161E311900756CC3 /* FSRecipientChooserViewController.xib */,
+				442472D1161E2D3600756CC3 /* FSContentChooserViewController.h */,
+				442472D2161E2D3600756CC3 /* FSContentChooserViewController.m */,
+				442472D3161E2D3600756CC3 /* FSContentChooserViewController.xib */,
+				442472D6161E2D5400756CC3 /* FSMessageWriterViewController.h */,
+				442472D7161E2D5400756CC3 /* FSMessageWriterViewController.m */,
+				442472D8161E2D5400756CC3 /* FSMessageWriterViewController.xib */,
+				442472DB161E2D7F00756CC3 /* FSMessageViewerViewController.h */,
+				442472DC161E2D7F00756CC3 /* FSMessageViewerViewController.m */,
+				442472DD161E2D7F00756CC3 /* FSMessageViewerViewController.xib */,
+			);
+			path = classes;
+			sourceTree = "<group>";
+		};
+		442472CA161E2D1800756CC3 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				442472CB161E2D1800756CC3 /* Default-568h@2x.png */,
+				442472CC161E2D1800756CC3 /* Default.png */,
+				442472CD161E2D1800756CC3 /* Default@2x.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,10 +208,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				442472A9161E28CE00756CC3 /* InfoPlist.strings in Resources */,
-				442472B1161E28CE00756CC3 /* Default.png in Resources */,
-				442472B3161E28CE00756CC3 /* Default@2x.png in Resources */,
-				442472B5161E28CE00756CC3 /* Default-568h@2x.png in Resources */,
-				442472BB161E28CE00756CC3 /* FSViewController.xib in Resources */,
+				442472C9161E2D0600756CC3 /* FSViewController.xib in Resources */,
+				442472CE161E2D1800756CC3 /* Default-568h@2x.png in Resources */,
+				442472CF161E2D1800756CC3 /* Default.png in Resources */,
+				442472D0161E2D1800756CC3 /* Default@2x.png in Resources */,
+				442472D5161E2D3600756CC3 /* FSContentChooserViewController.xib in Resources */,
+				442472DA161E2D5400756CC3 /* FSMessageWriterViewController.xib in Resources */,
+				442472DF161E2D7F00756CC3 /* FSMessageViewerViewController.xib in Resources */,
+				442472E4161E311900756CC3 /* FSRecipientChooserViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,8 +227,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				442472AB161E28CE00756CC3 /* main.m in Sources */,
-				442472AF161E28CE00756CC3 /* FSAppDelegate.m in Sources */,
-				442472B8161E28CE00756CC3 /* FSViewController.m in Sources */,
+				442472C6161E2CB100756CC3 /* FSAppDelegate.m in Sources */,
+				442472C7161E2CB100756CC3 /* FSViewController.m in Sources */,
+				442472D4161E2D3600756CC3 /* FSContentChooserViewController.m in Sources */,
+				442472D9161E2D5400756CC3 /* FSMessageWriterViewController.m in Sources */,
+				442472DE161E2D7F00756CC3 /* FSMessageViewerViewController.m in Sources */,
+				442472E3161E311900756CC3 /* FSRecipientChooserViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,14 +245,6 @@
 				442472A8161E28CE00756CC3 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		442472B9161E28CE00756CC3 /* FSViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				442472BA161E28CE00756CC3 /* en */,
-			);
-			name = FSViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
