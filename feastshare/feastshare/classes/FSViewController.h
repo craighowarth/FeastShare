@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FSRecipientChooserViewController.h"
 
 @interface FSViewController : UIViewController
 
 @property (nonatomic, strong) IBOutlet UIView *contentView;
+@property (nonatomic, strong) FSRecipientChooserViewController *recipientChooserVC;
 
 @end

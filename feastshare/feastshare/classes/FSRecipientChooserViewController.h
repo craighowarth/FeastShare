@@ -11,5 +11,6 @@
 @property (nonatomic, strong) IBOutlet UICollectionView *recipientCollectionView;
 
 - (IBAction)addRecipentButtonPressed:(UIButton *)sender;
-
+- (IBAction)recipientButtonPressed:(UIButton *)sender;
+-(void)reloadData;
 @end

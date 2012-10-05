@@ -18,8 +18,8 @@
     [Parse setApplicationId:@"YMwFqD1Gw49An91z6hJzFcMsRGwlE5zgt0NyRumw"
                   clientKey:@"PhQmB5llKUbD0yRqMUlwD40RAN1IhBB3FhCGOq6X"];
     
-    [PFUser enableAutomaticUser];
     
+      
     PFACL *defaultACL = [PFACL ACL];
     
     // If you would like all objects to be private by default, remove this line.
@@ -31,16 +31,49 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-	self.viewController = [[FSViewController alloc] initWithNibName:@"FSViewController" bundle:nil];
+    FSViewController* fsViewController = [[FSViewController alloc] initWithNibName:@"FSViewController" bundle:nil];
+	self.viewController = fsViewController;
 	self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     
-    
+    // Present signup sheet.
+    PFUser *currentUser = [PFUser currentUser];
+    if (!currentUser) { // Not signed in yet?
+        // Allow user to choose between signup and login.
+        //[self signUp];
+        
+        // Login (for demo: common account).
+        [PFUser logInWithUsernameInBackground:@"my name" password:@"my pass"
+                                        block:^(PFUser *user, NSError *error) {
+                                            if (user) {
+                                                [fsViewController.recipientChooserVC reloadData];
+                                            } else {
+                                                // The login failed. Check error to see why.
+                                            }
+                                        }];
+    }
+       
     [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge|
      UIRemoteNotificationTypeAlert|
      UIRemoteNotificationTypeSound];
 
     return YES;
+}
+
+- (void)signUp {
+    PFUser *user = [PFUser user];
+    user.username = @"my name";
+    user.password = @"my pass";
+    user.email = @"email@example.com";
+        
+    [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (!error) {
+            // Hooray! Let them use the app now.
+        } else {
+            // NSString *errorString = [[error userInfo] objectForKey:@"error"];
+            // Show the errorString somewhere and let the user try again.
+        }
+    }];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

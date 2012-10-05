@@ -10,3 +10,4 @@
 #define FSEvent_ContentChosen @"FSEvent_ContentChosen"
 #define FSEvent_MessageWritten @"FSEvent_MessageWritten"
 #define FSEvent_MessageSent @"FSEvent_MessageSent"
+#define FSEvent_EnterToken @"FSEvent_EnterToken"
