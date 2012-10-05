@@ -54,6 +54,9 @@
     [self setupRemoteReceiver];
 }
 
+-(void)reloadData{
+    // Update data after login. TODO.
+}
 
 -(void)setupRemoteReceiver{
     int random4digits = 0;
@@ -86,6 +89,10 @@
 
 -(void)getAllConnections
 {
+    if (![PFUser currentUser]){
+        NSLog(@"Current user not set");
+        return;
+    }
     PFQuery *query = [PFQuery queryWithClassName:@"connections"];
     [query whereKey:@"senderHash" equalTo:[[PFUser currentUser] username]];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {

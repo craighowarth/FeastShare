@@ -7,7 +7,6 @@
 //
 
 #import "FSViewController.h"
-#import "FSRecipientChooserViewController.h"
 #import "FSContentChooserViewController.h"
 #import "FSMessageWriterViewController.h"
 #import "FSMessageViewerViewController.h"
@@ -16,7 +15,6 @@
 
 @interface FSViewController ()
 
-@property (nonatomic, strong) FSRecipientChooserViewController *recipientChooserVC;
 @property (nonatomic, strong) FSContentChooserViewController *contentChooserVC;
 @property (nonatomic, strong) FSMessageWriterViewController *messageWriterVC;
 @property (nonatomic, strong) FSMessageViewerViewController *messageViewerVC;
