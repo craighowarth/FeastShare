@@ -97,7 +97,7 @@
         NSLog(@"Current user not set");
         return;
     }
-    PFQuery *query = [PFQuery queryWithClassName:@"connections"];
+    PFQuery *query = [PFQuery queryWithClassName:@"connection"];
     [query whereKey:@"senderHash" equalTo:[[PFUser currentUser] username]];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
