@@ -24,7 +24,8 @@
     return self;
 }
 
--(void)postImage:(UIImage*)image withMessage:(NSString*)message toReceiver:(NSString*)receiverHash{
+- (void)postImage:(UIImage *)image withMessage:(NSString *)message toReceiver:(NSString *)receiverHash
+{
     NSData *imageData = UIImagePNGRepresentation(image);
     PFFile *imageFile = [PFFile fileWithName:@"image.png" data:imageData];
     [imageFile save];
@@ -45,6 +46,11 @@
 	[self.messageTextView setText:self.chosenTweet];
 }
 
+- (NSString *)message
+{
+	return [self.messageTextView text];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -53,8 +59,8 @@
 
 - (IBAction)nextButtonPressed:(id)sender
 {
-    // Dummy message to self. Need to use real data.
-    [self postImage:[UIImage imageNamed:@"fry.png"] withMessage:@"This is a test message" toReceiver:[[PFUser currentUser] username]];
+    [self postImage:self.chosenImage withMessage:[self message] toReceiver:[[PFUser currentUser] username]];
+	
 	[[NSNotificationCenter defaultCenter] postNotificationName:FSEvent_MessageWritten object:nil userInfo:nil];
 }
 
