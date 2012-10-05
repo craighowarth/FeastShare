@@ -33,7 +33,7 @@
                 // Success. Found exactly one token. Save connection remotely.
                 PFObject* token = [objects objectAtIndex:0];
                 PFObject* connection = [PFObject objectWithClassName:@"connection"];
-                [connection setObject:[PFUser currentUser] forKey:@"receiverHash"];
+                [connection setObject:[[PFUser currentUser] username] forKey:@"receiverHash"];
                 [connection setObject:[token objectForKey:@"senderHash"] forKey:@"senderHash"];
                 // Should add some timestamp as well.
                 [connection save];
@@ -62,7 +62,7 @@
                 // No duplicate in database. Save token and display to user.
                 PFObject *token = [PFObject objectWithClassName:@"token"];
                 [token setObject:[NSNumber numberWithInt:random4digits] forKey:@"digits"];
-                [token setObject:[PFUser currentUser] forKey:@"senderHash"];
+                [token setObject:[[PFUser currentUser] username] forKey:@"senderHash"];
                 // Should add some timestamp as well.
                 [token save];
             }
@@ -75,7 +75,7 @@
 
 -(void)getAllReceivers{
     PFQuery *query = [PFQuery queryWithClassName:@"connections"];
-    [query whereKey:@"senderHash" equalTo:[PFUser currentUser]];
+    [query whereKey:@"senderHash" equalTo:[[PFUser currentUser] username]];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             // All previsouly configured receivers are in the objects array. Display to user.

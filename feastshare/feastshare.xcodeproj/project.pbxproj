@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37FECE5C161F2B3600BAA84F /* fry.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FECE5B161F2B3600BAA84F /* fry.png */; };
 		4424729F161E28CE00756CC3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4424729E161E28CE00756CC3 /* UIKit.framework */; };
 		442472A1161E28CE00756CC3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 442472A0161E28CE00756CC3 /* Foundation.framework */; };
 		442472A3161E28CE00756CC3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 442472A2161E28CE00756CC3 /* CoreGraphics.framework */; };
@@ -61,6 +62,7 @@
 
 /* Begin PBXFileReference section */
 		3731DAD6161E390200055B11 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		37FECE5B161F2B3600BAA84F /* fry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fry.png; sourceTree = "<group>"; };
 		4424729A161E28CE00756CC3 /* feastshare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = feastshare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4424729E161E28CE00756CC3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		442472A0161E28CE00756CC3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -256,6 +258,7 @@
 		44247311161F17FC00756CC3 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				37FECE5B161F2B3600BAA84F /* fry.png */,
 				44247312161F17FC00756CC3 /* Default-568h@2x.png */,
 				44247313161F17FC00756CC3 /* Default.png */,
 				44247314161F17FC00756CC3 /* Default@2x.png */,
@@ -371,6 +374,7 @@
 				4424735C161F21DE00756CC3 /* TwitterViewController.xib in Resources */,
 				44247361161F254500756CC3 /* FSMessageSenderViewController.xib in Resources */,
 				44EA71A5161F2AF1008B3C22 /* molly_me.jpeg in Resources */,
+				37FECE5C161F2B3600BAA84F /* fry.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
