@@ -34,7 +34,8 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(contentChosen:) name:FSEvent_ContentChosen object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(messageWritten:) name:FSEvent_MessageWritten object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(messageSent:) name:FSEvent_MessageSent object:nil];
-	
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(enterToken:) name:FSEvent_EnterToken object:nil];
+
 	self.recipientChooserVC = [[FSRecipientChooserViewController alloc] initWithNibName:nil bundle:nil];
 	self.contentChooserVC = [[FSContentChooserViewController alloc] initWithNibName:nil bundle:nil];
 	self.messageWriterVC = [[FSMessageWriterViewController alloc] initWithNibName:nil bundle:nil];
@@ -86,6 +87,14 @@
 	
 	[self transitionFromViewController:self.messageSenderVC
 					  toViewController:self.messageViewerVC];
+}
+
+- (void)enterToken:(NSNotification *)n
+{
+	NSLog(@"%s", __FUNCTION__);
+	
+	[self transitionFromViewController:self.recipientChooserVC
+					  toViewController:self.messageSenderVC];
 }
 
 

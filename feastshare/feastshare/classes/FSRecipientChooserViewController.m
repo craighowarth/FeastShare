@@ -26,6 +26,10 @@
     return self;
 }
 
+-(void)recipientButtonPressed:(UIButton *)sender{
+    [[NSNotificationCenter defaultCenter] postNotificationName:FSEvent_EnterToken object:nil userInfo:nil];
+}
+
 -(void)setupLocalReceiver:(int)digits{
     PFQuery *query = [PFQuery queryWithClassName:@"token"];
     [query whereKey:@"digits" equalTo:[NSNumber numberWithInt:digits]];
