@@ -39,20 +39,20 @@
 		4424732F161F1FAD00756CC3 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4424732E161F1FAD00756CC3 /* Accounts.framework */; };
 		44247331161F1FBD00756CC3 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44247330161F1FBD00756CC3 /* CFNetwork.framework */; };
 		44247333161F1FE900756CC3 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44247332161F1FE900756CC3 /* StoreKit.framework */; };
-		6003C56C161E4DC200CE4032 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003C561161E4DC200CE4032 /* NSObject+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6003C56D161E4DC200CE4032 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003C563161E4DC200CE4032 /* NSString+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6003C56E161E4DC200CE4032 /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003C565161E4DC200CE4032 /* SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6003C56F161E4DC200CE4032 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003C567161E4DC200CE4032 /* SBJsonBase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6003C570161E4DC200CE4032 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003C569161E4DC200CE4032 /* SBJsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6003C571161E4DC200CE4032 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003C56B161E4DC200CE4032 /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		602EE38F161E39860024D6E0 /* AppAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 602EE38D161E39860024D6E0 /* AppAuthViewController.m */; };
-		602EE390161E39860024D6E0 /* AppAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 602EE38E161E39860024D6E0 /* AppAuthViewController.xib */; };
-		602EE3A1161E43620024D6E0 /* TwitterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 602EE39F161E43620024D6E0 /* TwitterViewController.m */; };
-		602EE3A2161E43620024D6E0 /* TwitterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 602EE3A0161E43620024D6E0 /* TwitterViewController.xib */; };
-		602EE3A6161E43740024D6E0 /* FlickrViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 602EE3A4161E43740024D6E0 /* FlickrViewController.m */; };
-		602EE3A7161E43740024D6E0 /* FlickrViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 602EE3A5161E43740024D6E0 /* FlickrViewController.xib */; };
-		602EE3AB161E43840024D6E0 /* FacebookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 602EE3A9161E43840024D6E0 /* FacebookViewController.m */; };
-		602EE3AC161E43840024D6E0 /* FacebookViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 602EE3AA161E43840024D6E0 /* FacebookViewController.xib */; };
+		4424734F161F21DE00756CC3 /* AppAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44247336161F21DE00756CC3 /* AppAuthViewController.m */; };
+		44247350161F21DE00756CC3 /* AppAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44247337161F21DE00756CC3 /* AppAuthViewController.xib */; };
+		44247351161F21DE00756CC3 /* FacebookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44247339161F21DE00756CC3 /* FacebookViewController.m */; };
+		44247352161F21DE00756CC3 /* FacebookViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4424733A161F21DE00756CC3 /* FacebookViewController.xib */; };
+		44247353161F21DE00756CC3 /* FlickrViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4424733C161F21DE00756CC3 /* FlickrViewController.m */; };
+		44247354161F21DE00756CC3 /* FlickrViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4424733D161F21DE00756CC3 /* FlickrViewController.xib */; };
+		44247355161F21DE00756CC3 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 44247341161F21DE00756CC3 /* NSObject+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		44247356161F21DE00756CC3 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 44247343161F21DE00756CC3 /* NSString+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		44247357161F21DE00756CC3 /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 44247345161F21DE00756CC3 /* SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		44247358161F21DE00756CC3 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 44247347161F21DE00756CC3 /* SBJsonBase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		44247359161F21DE00756CC3 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 44247349161F21DE00756CC3 /* SBJsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4424735A161F21DE00756CC3 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4424734B161F21DE00756CC3 /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4424735B161F21DE00756CC3 /* TwitterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4424734D161F21DE00756CC3 /* TwitterViewController.m */; };
+		4424735C161F21DE00756CC3 /* TwitterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4424734E161F21DE00756CC3 /* TwitterViewController.xib */; };
 		60CD0CA5161E495B00EC03DE /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60CD0CA4161E495B00EC03DE /* Twitter.framework */; };
 /* End PBXBuildFile section */
 
@@ -99,31 +99,31 @@
 		4424732E161F1FAD00756CC3 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		44247330161F1FBD00756CC3 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		44247332161F1FE900756CC3 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		6003C55F161E4DC200CE4032 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
-		6003C560161E4DC200CE4032 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
-		6003C561161E4DC200CE4032 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
-		6003C562161E4DC200CE4032 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
-		6003C563161E4DC200CE4032 /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
-		6003C564161E4DC200CE4032 /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
-		6003C565161E4DC200CE4032 /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
-		6003C566161E4DC200CE4032 /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
-		6003C567161E4DC200CE4032 /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
-		6003C568161E4DC200CE4032 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
-		6003C569161E4DC200CE4032 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
-		6003C56A161E4DC200CE4032 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
-		6003C56B161E4DC200CE4032 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
-		602EE38C161E39860024D6E0 /* AppAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppAuthViewController.h; sourceTree = "<group>"; };
-		602EE38D161E39860024D6E0 /* AppAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppAuthViewController.m; sourceTree = "<group>"; };
-		602EE38E161E39860024D6E0 /* AppAuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppAuthViewController.xib; sourceTree = "<group>"; };
-		602EE39E161E43620024D6E0 /* TwitterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterViewController.h; sourceTree = "<group>"; };
-		602EE39F161E43620024D6E0 /* TwitterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterViewController.m; sourceTree = "<group>"; };
-		602EE3A0161E43620024D6E0 /* TwitterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwitterViewController.xib; sourceTree = "<group>"; };
-		602EE3A3161E43730024D6E0 /* FlickrViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrViewController.h; sourceTree = "<group>"; };
-		602EE3A4161E43740024D6E0 /* FlickrViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrViewController.m; sourceTree = "<group>"; };
-		602EE3A5161E43740024D6E0 /* FlickrViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlickrViewController.xib; sourceTree = "<group>"; };
-		602EE3A8161E43840024D6E0 /* FacebookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookViewController.h; sourceTree = "<group>"; };
-		602EE3A9161E43840024D6E0 /* FacebookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookViewController.m; sourceTree = "<group>"; };
-		602EE3AA161E43840024D6E0 /* FacebookViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FacebookViewController.xib; sourceTree = "<group>"; };
+		44247335161F21DE00756CC3 /* AppAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppAuthViewController.h; sourceTree = "<group>"; };
+		44247336161F21DE00756CC3 /* AppAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppAuthViewController.m; sourceTree = "<group>"; };
+		44247337161F21DE00756CC3 /* AppAuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppAuthViewController.xib; sourceTree = "<group>"; };
+		44247338161F21DE00756CC3 /* FacebookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookViewController.h; sourceTree = "<group>"; };
+		44247339161F21DE00756CC3 /* FacebookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookViewController.m; sourceTree = "<group>"; };
+		4424733A161F21DE00756CC3 /* FacebookViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FacebookViewController.xib; sourceTree = "<group>"; };
+		4424733B161F21DE00756CC3 /* FlickrViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrViewController.h; sourceTree = "<group>"; };
+		4424733C161F21DE00756CC3 /* FlickrViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrViewController.m; sourceTree = "<group>"; };
+		4424733D161F21DE00756CC3 /* FlickrViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlickrViewController.xib; sourceTree = "<group>"; };
+		4424733F161F21DE00756CC3 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		44247340161F21DE00756CC3 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		44247341161F21DE00756CC3 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		44247342161F21DE00756CC3 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		44247343161F21DE00756CC3 /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		44247344161F21DE00756CC3 /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
+		44247345161F21DE00756CC3 /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
+		44247346161F21DE00756CC3 /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		44247347161F21DE00756CC3 /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
+		44247348161F21DE00756CC3 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		44247349161F21DE00756CC3 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		4424734A161F21DE00756CC3 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		4424734B161F21DE00756CC3 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		4424734C161F21DE00756CC3 /* TwitterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterViewController.h; sourceTree = "<group>"; };
+		4424734D161F21DE00756CC3 /* TwitterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterViewController.m; sourceTree = "<group>"; };
+		4424734E161F21DE00756CC3 /* TwitterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwitterViewController.xib; sourceTree = "<group>"; };
 		60CD0CA4161E495B00EC03DE /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -201,19 +201,6 @@
 			children = (
 				44247311161F17FC00756CC3 /* images */,
 				442472F2161E7C6900756CC3 /* classes */,
-				6003C55E161E4DB400CE4032 /* JSON */,
-				602EE38C161E39860024D6E0 /* AppAuthViewController.h */,
-				602EE38D161E39860024D6E0 /* AppAuthViewController.m */,
-				602EE38E161E39860024D6E0 /* AppAuthViewController.xib */,
-				602EE3A8161E43840024D6E0 /* FacebookViewController.h */,
-				602EE3A9161E43840024D6E0 /* FacebookViewController.m */,
-				602EE3AA161E43840024D6E0 /* FacebookViewController.xib */,
-				602EE3A3161E43730024D6E0 /* FlickrViewController.h */,
-				602EE3A4161E43740024D6E0 /* FlickrViewController.m */,
-				602EE3A5161E43740024D6E0 /* FlickrViewController.xib */,
-				602EE39E161E43620024D6E0 /* TwitterViewController.h */,
-				602EE39F161E43620024D6E0 /* TwitterViewController.m */,
-				602EE3A0161E43620024D6E0 /* TwitterViewController.xib */,
 				442472A5161E28CE00756CC3 /* Supporting Files */,
 			);
 			path = feastshare;
@@ -233,9 +220,13 @@
 		442472F2161E7C6900756CC3 /* classes */ = {
 			isa = PBXGroup;
 			children = (
+				44247334161F21DE00756CC3 /* social */,
+				442472F5161E7C6900756CC3 /* FSConstants.h */,
 				442472F3161E7C6900756CC3 /* FSAppDelegate.h */,
 				442472F4161E7C6900756CC3 /* FSAppDelegate.m */,
-				442472F5161E7C6900756CC3 /* FSConstants.h */,
+				44247302161E7C6900756CC3 /* FSViewController.h */,
+				44247303161E7C6900756CC3 /* FSViewController.m */,
+				44247304161E7C6900756CC3 /* FSViewController.xib */,
 				442472F6161E7C6900756CC3 /* FSContentChooserViewController.h */,
 				442472F7161E7C6900756CC3 /* FSContentChooserViewController.m */,
 				442472F8161E7C6900756CC3 /* FSContentChooserViewController.xib */,
@@ -248,9 +239,6 @@
 				442472FF161E7C6900756CC3 /* FSRecipientChooserViewController.h */,
 				44247300161E7C6900756CC3 /* FSRecipientChooserViewController.m */,
 				44247301161E7C6900756CC3 /* FSRecipientChooserViewController.xib */,
-				44247302161E7C6900756CC3 /* FSViewController.h */,
-				44247303161E7C6900756CC3 /* FSViewController.m */,
-				44247304161E7C6900756CC3 /* FSViewController.xib */,
 			);
 			path = classes;
 			sourceTree = "<group>";
@@ -265,24 +253,44 @@
 			path = images;
 			sourceTree = "<group>";
 		};
-		6003C55E161E4DB400CE4032 /* JSON */ = {
+		44247334161F21DE00756CC3 /* social */ = {
 			isa = PBXGroup;
 			children = (
-				6003C55F161E4DC200CE4032 /* JSON.h */,
-				6003C560161E4DC200CE4032 /* NSObject+SBJSON.h */,
-				6003C561161E4DC200CE4032 /* NSObject+SBJSON.m */,
-				6003C562161E4DC200CE4032 /* NSString+SBJSON.h */,
-				6003C563161E4DC200CE4032 /* NSString+SBJSON.m */,
-				6003C564161E4DC200CE4032 /* SBJSON.h */,
-				6003C565161E4DC200CE4032 /* SBJSON.m */,
-				6003C566161E4DC200CE4032 /* SBJsonBase.h */,
-				6003C567161E4DC200CE4032 /* SBJsonBase.m */,
-				6003C568161E4DC200CE4032 /* SBJsonParser.h */,
-				6003C569161E4DC200CE4032 /* SBJsonParser.m */,
-				6003C56A161E4DC200CE4032 /* SBJsonWriter.h */,
-				6003C56B161E4DC200CE4032 /* SBJsonWriter.m */,
+				44247335161F21DE00756CC3 /* AppAuthViewController.h */,
+				44247336161F21DE00756CC3 /* AppAuthViewController.m */,
+				44247337161F21DE00756CC3 /* AppAuthViewController.xib */,
+				44247338161F21DE00756CC3 /* FacebookViewController.h */,
+				44247339161F21DE00756CC3 /* FacebookViewController.m */,
+				4424733A161F21DE00756CC3 /* FacebookViewController.xib */,
+				4424733B161F21DE00756CC3 /* FlickrViewController.h */,
+				4424733C161F21DE00756CC3 /* FlickrViewController.m */,
+				4424733D161F21DE00756CC3 /* FlickrViewController.xib */,
+				4424733E161F21DE00756CC3 /* json */,
+				4424734C161F21DE00756CC3 /* TwitterViewController.h */,
+				4424734D161F21DE00756CC3 /* TwitterViewController.m */,
+				4424734E161F21DE00756CC3 /* TwitterViewController.xib */,
 			);
-			name = JSON;
+			path = social;
+			sourceTree = "<group>";
+		};
+		4424733E161F21DE00756CC3 /* json */ = {
+			isa = PBXGroup;
+			children = (
+				4424733F161F21DE00756CC3 /* JSON.h */,
+				44247340161F21DE00756CC3 /* NSObject+SBJSON.h */,
+				44247341161F21DE00756CC3 /* NSObject+SBJSON.m */,
+				44247342161F21DE00756CC3 /* NSString+SBJSON.h */,
+				44247343161F21DE00756CC3 /* NSString+SBJSON.m */,
+				44247344161F21DE00756CC3 /* SBJSON.h */,
+				44247345161F21DE00756CC3 /* SBJSON.m */,
+				44247346161F21DE00756CC3 /* SBJsonBase.h */,
+				44247347161F21DE00756CC3 /* SBJsonBase.m */,
+				44247348161F21DE00756CC3 /* SBJsonParser.h */,
+				44247349161F21DE00756CC3 /* SBJsonParser.m */,
+				4424734A161F21DE00756CC3 /* SBJsonWriter.h */,
+				4424734B161F21DE00756CC3 /* SBJsonWriter.m */,
+			);
+			path = json;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,10 +346,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				442472A9161E28CE00756CC3 /* InfoPlist.strings in Resources */,
-				602EE390161E39860024D6E0 /* AppAuthViewController.xib in Resources */,
-				602EE3A2161E43620024D6E0 /* TwitterViewController.xib in Resources */,
-				602EE3A7161E43740024D6E0 /* FlickrViewController.xib in Resources */,
-				602EE3AC161E43840024D6E0 /* FacebookViewController.xib in Resources */,
 				44247307161E7C6900756CC3 /* FSContentChooserViewController.xib in Resources */,
 				44247309161E7C6900756CC3 /* FSMessageViewerViewController.xib in Resources */,
 				4424730B161E7C6900756CC3 /* FSMessageWriterViewController.xib in Resources */,
@@ -350,6 +354,10 @@
 				44247315161F17FC00756CC3 /* Default-568h@2x.png in Resources */,
 				44247316161F17FC00756CC3 /* Default.png in Resources */,
 				44247317161F17FC00756CC3 /* Default@2x.png in Resources */,
+				44247350161F21DE00756CC3 /* AppAuthViewController.xib in Resources */,
+				44247352161F21DE00756CC3 /* FacebookViewController.xib in Resources */,
+				44247354161F21DE00756CC3 /* FlickrViewController.xib in Resources */,
+				4424735C161F21DE00756CC3 /* TwitterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,22 +369,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				442472AB161E28CE00756CC3 /* main.m in Sources */,
-				602EE38F161E39860024D6E0 /* AppAuthViewController.m in Sources */,
-				602EE3A1161E43620024D6E0 /* TwitterViewController.m in Sources */,
-				602EE3A6161E43740024D6E0 /* FlickrViewController.m in Sources */,
-				602EE3AB161E43840024D6E0 /* FacebookViewController.m in Sources */,
-				6003C56C161E4DC200CE4032 /* NSObject+SBJSON.m in Sources */,
-				6003C56D161E4DC200CE4032 /* NSString+SBJSON.m in Sources */,
-				6003C56E161E4DC200CE4032 /* SBJSON.m in Sources */,
-				6003C56F161E4DC200CE4032 /* SBJsonBase.m in Sources */,
-				6003C570161E4DC200CE4032 /* SBJsonParser.m in Sources */,
-				6003C571161E4DC200CE4032 /* SBJsonWriter.m in Sources */,
 				44247305161E7C6900756CC3 /* FSAppDelegate.m in Sources */,
 				44247306161E7C6900756CC3 /* FSContentChooserViewController.m in Sources */,
 				44247308161E7C6900756CC3 /* FSMessageViewerViewController.m in Sources */,
 				4424730A161E7C6900756CC3 /* FSMessageWriterViewController.m in Sources */,
 				4424730C161E7C6900756CC3 /* FSRecipientChooserViewController.m in Sources */,
 				4424730E161E7C6900756CC3 /* FSViewController.m in Sources */,
+				4424734F161F21DE00756CC3 /* AppAuthViewController.m in Sources */,
+				44247351161F21DE00756CC3 /* FacebookViewController.m in Sources */,
+				44247353161F21DE00756CC3 /* FlickrViewController.m in Sources */,
+				44247355161F21DE00756CC3 /* NSObject+SBJSON.m in Sources */,
+				44247356161F21DE00756CC3 /* NSString+SBJSON.m in Sources */,
+				44247357161F21DE00756CC3 /* SBJSON.m in Sources */,
+				44247358161F21DE00756CC3 /* SBJsonBase.m in Sources */,
+				44247359161F21DE00756CC3 /* SBJsonParser.m in Sources */,
+				4424735A161F21DE00756CC3 /* SBJsonWriter.m in Sources */,
+				4424735B161F21DE00756CC3 /* TwitterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
