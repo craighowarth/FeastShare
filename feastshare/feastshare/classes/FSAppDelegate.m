@@ -56,6 +56,8 @@
                                                 // The login failed. Check error to see why.
                                             }
                                         }];
+    }else{
+        [fsViewController.recipientChooserVC reloadData];
     }
        
     [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge|

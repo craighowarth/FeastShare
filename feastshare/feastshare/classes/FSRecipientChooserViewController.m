@@ -26,6 +26,12 @@
     return self;
 }
 
+-(void)reloadData{
+    [self getAllConnections];
+}
+
+
+
 -(void)setupLocalReceiver:(int)digits{
     PFQuery *query = [PFQuery queryWithClassName:@"token"];
     [query whereKey:@"digits" equalTo:[NSNumber numberWithInt:digits]];
@@ -49,6 +55,11 @@
         }
     }];  
 }
+
+- (IBAction)recipientButtonPressed:(UIButton *)sender{
+    [[NSNotificationCenter defaultCenter] postNotificationName:FSEvent_EnterToken object:nil userInfo:nil];
+}
+
 
 - (IBAction)addRecipentButtonPressed:(UIButton *)sender{
     [self setupRemoteReceiver];
@@ -86,14 +97,14 @@
 
 -(void)getAllConnections
 {
-	NSLog(@"%@", [PFUser currentUser]);
-    PFQuery *query = [PFQuery queryWithClassName:@"connections"];
+    PFQuery *query = [PFQuery queryWithClassName:@"connection"];
     [query whereKey:@"senderHash" equalTo:[[PFUser currentUser] username]];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             // All previsouly configured receivers are in the objects array. Display to user.
 			NSLog(@"Successfully retrieved %d connections.", objects.count);
             self.connections = objects;
+            [self.recipientCollectionView reloadData];
         } else {
             // Log details of the failure
             NSLog(@"Error: %@ %@", error, [error userInfo]);
@@ -139,7 +150,7 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-	return 5; //[self.connections count];
+	return [self.connections count];
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
