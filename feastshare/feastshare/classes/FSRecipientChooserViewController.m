@@ -121,9 +121,7 @@
 	
 	UINib *cellNib = [UINib nibWithNibName:@"FSRecipientCell" bundle:nil];
 	[self.recipientCollectionView registerNib:cellNib forCellWithReuseIdentifier:@"recipientCell"];
-	
-//	[self.recipientCollectionView registerClass:[FSRecipientCollectionViewCell class] forCellWithReuseIdentifier:@"recipientCell"];
-	
+		
 	UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
 	[flowLayout setItemSize:CGSizeMake(366, 396)];
 	[flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
@@ -141,11 +139,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-//- (void)buttonPressed:(UIButton *)sender
-//{
-//	[[NSNotificationCenter defaultCenter] postNotificationName:FSEvent_RecipientChosen object:nil userInfo:[NSDictionary dictionaryWithObject:@"69wq78itgjipafmua8yzt7s8g" forKey:@"receievrHash"]];
-//}
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
@@ -165,6 +158,11 @@
 	
 //	cell.imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"fry.png"]];
 //	[cell setFrame:CGRectMake(0, 0, 300, 300)];
+	
+	NSInteger row = [indexPath row]+1;
+	UIImageView *imageView = (UIImageView *)[cell viewWithTag:100];
+	NSString *imageName = [NSString stringWithFormat:@"polaroids_image_0%d.png", row];
+	[imageView setImage:[UIImage imageNamed:imageName]];
 	
 	return cell;
 }
