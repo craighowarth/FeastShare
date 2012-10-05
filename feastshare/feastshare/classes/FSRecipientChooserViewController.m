@@ -54,7 +54,10 @@
 
 
 -(void)setupRemoteReceiver{
-    int random4digits = rand() % 10000;
+    int random4digits = 0;
+    while (random4digits<1000){ // create a number from 1000 to 9999
+        random4digits = rand() % 10000;
+    }
     PFQuery *query = [PFQuery queryWithClassName:@"token"];
     [query whereKey:@"digits" equalTo:[NSNumber numberWithInt:random4digits]];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
