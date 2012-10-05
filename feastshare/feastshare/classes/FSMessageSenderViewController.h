@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 Feast. All rights reserved.
 //
 
-@interface FSMessageSenderViewController : UIViewController{
+@interface FSMessageSenderViewController : UIViewController <UIPickerViewDataSource,UIPickerViewDelegate>{
 }
-@property (nonatomic, strong) IBOutlet UITextField *digits;
+@property (nonatomic, strong) IBOutlet UIPickerView *picker;
 
 - (IBAction)nextButtonPressed:(id)sender;
 
