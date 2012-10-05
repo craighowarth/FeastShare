@@ -8,6 +8,9 @@
 
 @interface FSContentChooserViewController : UIViewController
 
+@property (nonatomic, strong) UIImage *chosenImage;
+@property (nonatomic, strong) NSString *chosenTweet;
+
 - (IBAction)nextButtonPressed:(id)sender;
 
 @end

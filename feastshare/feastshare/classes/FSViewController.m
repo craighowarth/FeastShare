@@ -35,8 +35,6 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(messageWritten:) name:FSEvent_MessageWritten object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(messageSent:) name:FSEvent_MessageSent object:nil];
 	
-	
-
 	self.recipientChooserVC = [[FSRecipientChooserViewController alloc] initWithNibName:nil bundle:nil];
 	self.contentChooserVC = [[FSContentChooserViewController alloc] initWithNibName:nil bundle:nil];
 	self.messageWriterVC = [[FSMessageWriterViewController alloc] initWithNibName:nil bundle:nil];
@@ -60,16 +58,17 @@
 	
 	[self transitionFromViewController:self.recipientChooserVC
 					  toViewController:self.contentChooserVC];
-	
 }
 
 - (void)contentChosen:(NSNotification *)n
 {
 	NSLog(@"%s", __FUNCTION__);
 
+	[self.messageWriterVC setChosenImage:[self.contentChooserVC chosenImage]];
+	[self.messageWriterVC setChosenTweet:[self.contentChooserVC chosenTweet]];
+	
 	[self transitionFromViewController:self.contentChooserVC
 					  toViewController:self.messageWriterVC];
-
 }
 
 - (void)messageWritten:(NSNotification *)n
@@ -78,7 +77,6 @@
 
 	[self transitionFromViewController:self.messageWriterVC
 					  toViewController:self.messageSenderVC];
-
 }
 
 - (void)messageSent:(NSNotification *)n
@@ -87,7 +85,6 @@
 	
 	[self transitionFromViewController:self.messageSenderVC
 					  toViewController:self.messageViewerVC];
-	
 }
 
 
