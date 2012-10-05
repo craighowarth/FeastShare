@@ -8,4 +8,6 @@
 
 @interface FSContentChooserViewController : UIViewController
 
+- (IBAction)nextButtonPressed:(id)sender;
+
 @end

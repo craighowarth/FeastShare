@@ -1,19 +1,19 @@
 //
-//  FSContentChooserViewController.m
+//  FSMessageSenderViewController.m
 //  feastshare
 //
-//  Created by Craig Howarth on 10/4/12.
+//  Created by Craig Howarth on 10/5/12.
 //  Copyright (c) 2012 Feast. All rights reserved.
 //
 
-#import "FSContentChooserViewController.h"
+#import "FSMessageSenderViewController.h"
 #import "FSConstants.h"
 
-@interface FSContentChooserViewController ()
+@interface FSMessageSenderViewController ()
 
 @end
 
-@implementation FSContentChooserViewController
+@implementation FSMessageSenderViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,10 +36,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+
 - (IBAction)nextButtonPressed:(id)sender
 {
-	[[NSNotificationCenter defaultCenter] postNotificationName:FSEvent_ContentChosen object:nil userInfo:nil];
-	
+	[[NSNotificationCenter defaultCenter] postNotificationName:FSEvent_MessageSent object:nil userInfo:nil];
 }
 
 @end

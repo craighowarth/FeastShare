@@ -7,6 +7,7 @@
 //
 #import "Parse/Parse.h"
 #import "FSMessageWriterViewController.h"
+#import "FSConstants.h"
 
 @interface FSMessageWriterViewController ()
 
@@ -46,6 +47,11 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)nextButtonPressed:(id)sender
+{
+	[[NSNotificationCenter defaultCenter] postNotificationName:FSEvent_MessageWritten object:nil userInfo:nil];
 }
 
 @end

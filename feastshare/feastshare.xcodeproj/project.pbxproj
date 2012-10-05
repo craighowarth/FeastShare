@@ -53,6 +53,8 @@
 		4424735A161F21DE00756CC3 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4424734B161F21DE00756CC3 /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4424735B161F21DE00756CC3 /* TwitterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4424734D161F21DE00756CC3 /* TwitterViewController.m */; };
 		4424735C161F21DE00756CC3 /* TwitterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4424734E161F21DE00756CC3 /* TwitterViewController.xib */; };
+		44247360161F254500756CC3 /* FSMessageSenderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4424735E161F254500756CC3 /* FSMessageSenderViewController.m */; };
+		44247361161F254500756CC3 /* FSMessageSenderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4424735F161F254500756CC3 /* FSMessageSenderViewController.xib */; };
 		60CD0CA5161E495B00EC03DE /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60CD0CA4161E495B00EC03DE /* Twitter.framework */; };
 /* End PBXBuildFile section */
 
@@ -124,6 +126,9 @@
 		4424734C161F21DE00756CC3 /* TwitterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterViewController.h; sourceTree = "<group>"; };
 		4424734D161F21DE00756CC3 /* TwitterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterViewController.m; sourceTree = "<group>"; };
 		4424734E161F21DE00756CC3 /* TwitterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwitterViewController.xib; sourceTree = "<group>"; };
+		4424735D161F254500756CC3 /* FSMessageSenderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSMessageSenderViewController.h; sourceTree = "<group>"; };
+		4424735E161F254500756CC3 /* FSMessageSenderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSMessageSenderViewController.m; sourceTree = "<group>"; };
+		4424735F161F254500756CC3 /* FSMessageSenderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSMessageSenderViewController.xib; sourceTree = "<group>"; };
 		60CD0CA4161E495B00EC03DE /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -227,18 +232,21 @@
 				44247302161E7C6900756CC3 /* FSViewController.h */,
 				44247303161E7C6900756CC3 /* FSViewController.m */,
 				44247304161E7C6900756CC3 /* FSViewController.xib */,
-				442472F6161E7C6900756CC3 /* FSContentChooserViewController.h */,
-				442472F7161E7C6900756CC3 /* FSContentChooserViewController.m */,
-				442472F8161E7C6900756CC3 /* FSContentChooserViewController.xib */,
-				442472F9161E7C6900756CC3 /* FSMessageViewerViewController.h */,
-				442472FA161E7C6900756CC3 /* FSMessageViewerViewController.m */,
-				442472FB161E7C6900756CC3 /* FSMessageViewerViewController.xib */,
-				442472FC161E7C6900756CC3 /* FSMessageWriterViewController.h */,
-				442472FD161E7C6900756CC3 /* FSMessageWriterViewController.m */,
-				442472FE161E7C6900756CC3 /* FSMessageWriterViewController.xib */,
 				442472FF161E7C6900756CC3 /* FSRecipientChooserViewController.h */,
 				44247300161E7C6900756CC3 /* FSRecipientChooserViewController.m */,
 				44247301161E7C6900756CC3 /* FSRecipientChooserViewController.xib */,
+				442472F6161E7C6900756CC3 /* FSContentChooserViewController.h */,
+				442472F7161E7C6900756CC3 /* FSContentChooserViewController.m */,
+				442472F8161E7C6900756CC3 /* FSContentChooserViewController.xib */,
+				442472FC161E7C6900756CC3 /* FSMessageWriterViewController.h */,
+				442472FD161E7C6900756CC3 /* FSMessageWriterViewController.m */,
+				442472FE161E7C6900756CC3 /* FSMessageWriterViewController.xib */,
+				4424735D161F254500756CC3 /* FSMessageSenderViewController.h */,
+				4424735E161F254500756CC3 /* FSMessageSenderViewController.m */,
+				4424735F161F254500756CC3 /* FSMessageSenderViewController.xib */,
+				442472F9161E7C6900756CC3 /* FSMessageViewerViewController.h */,
+				442472FA161E7C6900756CC3 /* FSMessageViewerViewController.m */,
+				442472FB161E7C6900756CC3 /* FSMessageViewerViewController.xib */,
 			);
 			path = classes;
 			sourceTree = "<group>";
@@ -358,6 +366,7 @@
 				44247352161F21DE00756CC3 /* FacebookViewController.xib in Resources */,
 				44247354161F21DE00756CC3 /* FlickrViewController.xib in Resources */,
 				4424735C161F21DE00756CC3 /* TwitterViewController.xib in Resources */,
+				44247361161F254500756CC3 /* FSMessageSenderViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +394,7 @@
 				44247359161F21DE00756CC3 /* SBJsonParser.m in Sources */,
 				4424735A161F21DE00756CC3 /* SBJsonWriter.m in Sources */,
 				4424735B161F21DE00756CC3 /* TwitterViewController.m in Sources */,
+				44247360161F254500756CC3 /* FSMessageSenderViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

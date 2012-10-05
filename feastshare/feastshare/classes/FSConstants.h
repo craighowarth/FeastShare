@@ -8,3 +8,5 @@
 
 #define FSEvent_RecipientChosen @"FSEvent_RecipientChosen"
 #define FSEvent_ContentChosen @"FSEvent_ContentChosen"
+#define FSEvent_MessageWritten @"FSEvent_MessageWritten"
+#define FSEvent_MessageSent @"FSEvent_MessageSent"
