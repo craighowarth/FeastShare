@@ -9,7 +9,7 @@
 #import "FSRecipientChooserViewController.h"
 #import "FSConstants.h"
 
-@interface FSRecipientChooserViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface FSRecipientChooserViewController () 
 
 @end
 
@@ -92,8 +92,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 	
-	[self.recipientTableView setDelegate:self];
-	[self.recipientTableView setDataSource:self];
 }
 
 - (void)didReceiveMemoryWarning
@@ -102,28 +100,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return 5;
-}
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)buttonPressed:(UIButton *)sender
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellIdentifier"];
-    
-    if (cell == nil) {
-		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cellIdentifier"];
-	}
-    
-	[[cell textLabel] setText:[NSString stringWithFormat:@"%d",[indexPath row]]];
-    
-    return cell;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-	NSLog(@"%s", __FUNCTION__);
-
 	[[NSNotificationCenter defaultCenter] postNotificationName:FSEvent_RecipientChosen object:nil userInfo:nil];
 }
 
