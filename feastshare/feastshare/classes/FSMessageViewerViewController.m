@@ -39,12 +39,12 @@
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     // October 2012 Image
-    UIImageView* imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"fry.png"]];
+    UIImageView* imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"steps_header_01.png"]];
     return imageView;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 200;
+    return 80;
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
