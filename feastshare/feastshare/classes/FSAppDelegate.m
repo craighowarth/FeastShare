@@ -37,21 +37,22 @@
     [self.window makeKeyAndVisible];
     
     // Present signup sheet.
-    //[self signUp];
-    
-    // Login (for demo: common account).
-    [PFUser logInWithUsernameInBackground:@"my name" password:@"my pass"
-                                    block:^(PFUser *user, NSError *error) {
-                                        if (user) {
-                                            [fsViewController.recipientChooserVC reloadData];
-                                        } else {
-                                            // The login failed. Check error to see why.
-                                        }
-                                    }];
-    //[PFUser enableAutomaticUser];
-    //NSLog(@"%@",[PFUser currentUser]);
-
-    
+    PFUser *currentUser = [PFUser currentUser];
+    if (!currentUser) { // Not signed in yet?
+        // Allow user to choose between signup and login.
+        //[self signUp];
+        
+        // Login (for demo: common account).
+        [PFUser logInWithUsernameInBackground:@"my name" password:@"my pass"
+                                        block:^(PFUser *user, NSError *error) {
+                                            if (user) {
+                                                [fsViewController.recipientChooserVC reloadData];
+                                            } else {
+                                                // The login failed. Check error to see why.
+                                            }
+                                        }];
+    }
+       
     [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge|
      UIRemoteNotificationTypeAlert|
      UIRemoteNotificationTypeSound];
