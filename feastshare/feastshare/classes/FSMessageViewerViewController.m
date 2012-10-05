@@ -8,8 +8,9 @@
 #import "Parse/Parse.h"
 #import "FSMessageViewerViewController.h"
 
-@interface FSMessageViewerViewController ()
-
+@interface FSMessageViewerViewController (){
+    NSArray* posts;
+}
 @end
 
 @implementation FSMessageViewerViewController
@@ -23,13 +24,38 @@
     return self;
 }
 
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSString* CellIdentifier = @"ViewerCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    PFObject* post = [posts objectAtIndex:indexPath.row];
+    cell.textLabel.text = [post objectForKey:@"message"];
+    cell.imageView.image = [UIImage imageWithData:[post objectForKey:@"image"]];
+    return cell;
+}
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 150;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return [posts count];
+}
+
 -(void)getListOfPosts{
     PFQuery *query = [PFQuery queryWithClassName:@"Post"];
     [query whereKey:@"receiverHash" equalTo:[PFUser currentUser]];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             // The find succeeded.
-            NSLog(@"Successfully retrieved %d posts.", objects.count);
+            posts = objects;
+            [tableview reloadData];
         } else {
             // Log details of the failure
             NSLog(@"Error: %@ %@", error, [error userInfo]);
@@ -40,6 +66,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self getListOfPosts];
     // Do any additional setup after loading the view from its nib.
 }
 

@@ -6,7 +6,11 @@
 //  Copyright (c) 2012 Feast. All rights reserved.
 //
 
-@interface FSMessageViewerViewController : UIViewController
+#import <UIKit/UIKit.h>
+
+@interface FSMessageViewerViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>{
+    IBOutlet UITableView* tableview;
+}
 
 
 
