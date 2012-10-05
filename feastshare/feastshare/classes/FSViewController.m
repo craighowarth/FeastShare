@@ -32,9 +32,10 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(contentChosen:) name:FSEvent_ContentChosen object:nil];
 
 	self.recipientChooserVC = [[FSRecipientChooserViewController alloc] initWithNibName:nil bundle:nil];
-	
-	[self.contentView addSubview:[self.recipientChooserVC view]];
+	self.contentChooserVC = [[FSContentChooserViewController alloc] initWithNibName:nil bundle:nil];
+
 	[self addChildViewController:self.recipientChooserVC];
+	[self.contentView addSubview:[self.recipientChooserVC view]];
 	[self.recipientChooserVC didMoveToParentViewController:self];
 }
 
@@ -48,23 +49,8 @@
 {
 	NSLog(@"%s", __FUNCTION__);
 	
-	if (self.contentChooserVC) {
-		self.contentChooserVC = [[FSContentChooserViewController alloc] initWithNibName:nil bundle:nil];
-	}
-	
-//	[self addChildViewController:self.contentChooserVC];
-//	[self transitionFromViewController:self.recipientChooserVC
-//					  toViewController:self.contentChooserVC
-//							  duration:0.5f
-//							   options:UIViewAnimationOptionTransitionCrossDissolve
-//							animations:^{
-//								//[self.recipientChooserVC.view removeFromSuperview];
-//								//[self.contentView addSubview:[self.contentChooserVC view]];
-//							}
-//							completion:^(BOOL finished) {
-//								//[self.contentChooserVC didMoveToParentViewController:self];
-//								//[self.recipientChooserVC removeFromParentViewController];
-//							}];
+	[self transitionFromViewController:self.recipientChooserVC
+					  toViewController:self.contentChooserVC];
 	
 }
 
@@ -74,6 +60,30 @@
 	
 }
 
+- (void)transitionFromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC
+{
+	if (fromVC == toVC)
+	{
+		// cannot transition to same
+		return;
+	}
+	
+	// notify
+	[fromVC willMoveToParentViewController:nil];
+	[self addChildViewController:toVC];
+	
+	// transition
+	[self transitionFromViewController:fromVC
+					  toViewController:toVC
+							  duration:0.5f
+							   options:UIViewAnimationOptionTransitionCrossDissolve
+							animations:^{
+							}
+							completion:^(BOOL finished) {
+								[toVC didMoveToParentViewController:self];
+								[fromVC removeFromParentViewController];
+							}];
+}
 
 
 @end
