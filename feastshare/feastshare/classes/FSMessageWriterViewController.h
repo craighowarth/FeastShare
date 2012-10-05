@@ -8,6 +8,12 @@
 
 @interface FSMessageWriterViewController : UIViewController
 
+@property (nonatomic, strong) UIImage *chosenImage;
+@property (nonatomic, strong) NSString *chosenTweet;
+
+@property (nonatomic, strong) IBOutlet UIImageView *chosenImageView;
+@property (nonatomic, strong) IBOutlet UITextView *messageTextView;
+
 - (IBAction)nextButtonPressed:(id)sender;
 
 @end

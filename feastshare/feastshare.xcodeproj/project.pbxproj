@@ -55,6 +55,7 @@
 		4424735C161F21DE00756CC3 /* TwitterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4424734E161F21DE00756CC3 /* TwitterViewController.xib */; };
 		44247360161F254500756CC3 /* FSMessageSenderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4424735E161F254500756CC3 /* FSMessageSenderViewController.m */; };
 		44247361161F254500756CC3 /* FSMessageSenderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4424735F161F254500756CC3 /* FSMessageSenderViewController.xib */; };
+		44EA71A5161F2AF1008B3C22 /* molly_me.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 44EA71A4161F2AF1008B3C22 /* molly_me.jpeg */; };
 		60CD0CA5161E495B00EC03DE /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60CD0CA4161E495B00EC03DE /* Twitter.framework */; };
 /* End PBXBuildFile section */
 
@@ -129,6 +130,7 @@
 		4424735D161F254500756CC3 /* FSMessageSenderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSMessageSenderViewController.h; sourceTree = "<group>"; };
 		4424735E161F254500756CC3 /* FSMessageSenderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSMessageSenderViewController.m; sourceTree = "<group>"; };
 		4424735F161F254500756CC3 /* FSMessageSenderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSMessageSenderViewController.xib; sourceTree = "<group>"; };
+		44EA71A4161F2AF1008B3C22 /* molly_me.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = molly_me.jpeg; sourceTree = "<group>"; };
 		60CD0CA4161E495B00EC03DE /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -257,6 +259,7 @@
 				44247312161F17FC00756CC3 /* Default-568h@2x.png */,
 				44247313161F17FC00756CC3 /* Default.png */,
 				44247314161F17FC00756CC3 /* Default@2x.png */,
+				44EA71A4161F2AF1008B3C22 /* molly_me.jpeg */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				44247354161F21DE00756CC3 /* FlickrViewController.xib in Resources */,
 				4424735C161F21DE00756CC3 /* TwitterViewController.xib in Resources */,
 				44247361161F254500756CC3 /* FSMessageSenderViewController.xib in Resources */,
+				44EA71A5161F2AF1008B3C22 /* molly_me.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

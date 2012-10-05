@@ -38,6 +38,9 @@
 
 - (IBAction)nextButtonPressed:(id)sender
 {
+	self.chosenImage = [UIImage imageNamed:@"molly_me.jpeg"];
+	self.chosenTweet = @"I just had dinner at Per Se!";
+	
 	[[NSNotificationCenter defaultCenter] postNotificationName:FSEvent_ContentChosen object:nil userInfo:nil];
 	
 }

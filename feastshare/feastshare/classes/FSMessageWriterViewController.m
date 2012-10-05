@@ -40,7 +40,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+	
+	[self.chosenImageView setImage:self.chosenImage];
+	[self.messageTextView setText:self.chosenTweet];
 }
 
 - (void)didReceiveMemoryWarning
