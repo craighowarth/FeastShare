@@ -31,6 +31,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     PFObject* post = [posts objectAtIndex:indexPath.row];
+    cell.textLabel.numberOfLines = 0;
     cell.textLabel.text = [post objectForKey:@"message"];
     PFFile* file = [post objectForKey:@"image"];
     cell.imageView.image = [UIImage imageWithData:[file getData]];
