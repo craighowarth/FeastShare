@@ -55,6 +55,7 @@
                 // Move on.
                 [[NSNotificationCenter defaultCenter] postNotificationName:FSEvent_MessageSent object:nil userInfo:nil];
             }else{
+                NSLog(@"Token not found.");
                 // No token found. Present error message to user.
             }
         } else {

@@ -21,6 +21,8 @@
 @property (nonatomic, strong) FSMessageWriterViewController *messageWriterVC;
 @property (nonatomic, strong) FSMessageViewerViewController *messageViewerVC;
 @property (nonatomic, strong) FSMessageSenderViewController *messageSenderVC;
+@property (nonatomic, strong) NSString* receiverHash;
+
 
 @end
 
@@ -54,6 +56,7 @@
 
 - (void)recipientChosen:(NSNotification *)n
 {
+    self.receiverHash = [[n userInfo] objectForKey:@"receiverHash"];
 	NSLog(@"%s", __FUNCTION__);
 	
 	[self transitionFromViewController:self.recipientChooserVC
