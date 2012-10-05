@@ -56,6 +56,8 @@
 		4424735C161F21DE00756CC3 /* TwitterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4424734E161F21DE00756CC3 /* TwitterViewController.xib */; };
 		44247360161F254500756CC3 /* FSMessageSenderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4424735E161F254500756CC3 /* FSMessageSenderViewController.m */; };
 		44247361161F254500756CC3 /* FSMessageSenderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4424735F161F254500756CC3 /* FSMessageSenderViewController.xib */; };
+		443F5811161F5C5300405E23 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 443F580E161F5C5300405E23 /* SVProgressHUD.bundle */; };
+		443F5812161F5C5300405E23 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 443F5810161F5C5300405E23 /* SVProgressHUD.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		449F4F7B161F4DDD000CEA32 /* FSRecipientCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 449F4F7A161F4DDD000CEA32 /* FSRecipientCell.xib */; };
 		449F4F86161F519F000CEA32 /* add_recipient.png in Resources */ = {isa = PBXBuildFile; fileRef = 449F4F7C161F519F000CEA32 /* add_recipient.png */; };
 		449F4F87161F519F000CEA32 /* polaroids_image_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 449F4F7D161F519F000CEA32 /* polaroids_image_01.png */; };
@@ -144,6 +146,9 @@
 		4424735D161F254500756CC3 /* FSMessageSenderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSMessageSenderViewController.h; sourceTree = "<group>"; };
 		4424735E161F254500756CC3 /* FSMessageSenderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSMessageSenderViewController.m; sourceTree = "<group>"; };
 		4424735F161F254500756CC3 /* FSMessageSenderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSMessageSenderViewController.xib; sourceTree = "<group>"; };
+		443F580E161F5C5300405E23 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		443F580F161F5C5300405E23 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		443F5810161F5C5300405E23 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		449F4F7A161F4DDD000CEA32 /* FSRecipientCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSRecipientCell.xib; sourceTree = "<group>"; };
 		449F4F7C161F519F000CEA32 /* add_recipient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_recipient.png; sourceTree = "<group>"; };
 		449F4F7D161F519F000CEA32 /* polaroids_image_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = polaroids_image_01.png; sourceTree = "<group>"; };
@@ -253,6 +258,7 @@
 		442472F2161E7C6900756CC3 /* classes */ = {
 			isa = PBXGroup;
 			children = (
+				443F580D161F5C5300405E23 /* SVProgressHUD */,
 				44247334161F21DE00756CC3 /* social */,
 				442472F5161E7C6900756CC3 /* FSConstants.h */,
 				442472F3161E7C6900756CC3 /* FSAppDelegate.h */,
@@ -343,6 +349,16 @@
 			path = json;
 			sourceTree = "<group>";
 		};
+		443F580D161F5C5300405E23 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				443F580E161F5C5300405E23 /* SVProgressHUD.bundle */,
+				443F580F161F5C5300405E23 /* SVProgressHUD.h */,
+				443F5810161F5C5300405E23 /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -423,6 +439,7 @@
 				449F4F8D161F519F000CEA32 /* title_pick_recipient.png in Resources */,
 				449F4F8E161F519F000CEA32 /* title_add_content.png in Resources */,
 				449F4F8F161F519F000CEA32 /* title_make_album.png in Resources */,
+				443F5811161F5C5300405E23 /* SVProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,6 +468,7 @@
 				4424735A161F21DE00756CC3 /* SBJsonWriter.m in Sources */,
 				4424735B161F21DE00756CC3 /* TwitterViewController.m in Sources */,
 				44247360161F254500756CC3 /* FSMessageSenderViewController.m in Sources */,
+				443F5812161F5C5300405E23 /* SVProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,7 @@
 #import "Parse/Parse.h"
 #import "FSMessageWriterViewController.h"
 #import "FSConstants.h"
+#import "SVProgressHUD.h"
 
 @interface FSMessageWriterViewController ()
 
@@ -59,7 +60,16 @@
 
 - (IBAction)nextButtonPressed:(id)sender
 {
+	[SVProgressHUD showWithStatus:@"Posting message"];
+
+	[self performSelector:@selector(postMessage) withObject:nil afterDelay:0.5f];
+}
+
+- (void)postMessage
+{
     [self postImage:self.chosenImage withMessage:[self message] toReceiver:[[PFUser currentUser] username]];
+	
+	[SVProgressHUD dismiss];
 	
 	[[NSNotificationCenter defaultCenter] postNotificationName:FSEvent_MessageWritten object:nil userInfo:nil];
 }
