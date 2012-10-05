@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Parse/Parse.h"
 
 @class FSViewController;
 
-@interface FSAppDelegate : UIResponder <UIApplicationDelegate>
+@interface FSAppDelegate : UIResponder <UIApplicationDelegate,PFLogInViewControllerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
