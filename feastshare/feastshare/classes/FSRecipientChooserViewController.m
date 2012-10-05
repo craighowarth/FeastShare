@@ -48,6 +48,10 @@
     }];  
 }
 
+- (IBAction)addRecipentButtonPressed:(UIButton *)sender{
+    [self setupRemoteReceiver];
+}
+
 
 -(void)setupRemoteReceiver{
     int random4digits = rand() % 10000;
@@ -65,6 +69,8 @@
                 [token setObject:[[PFUser currentUser] username] forKey:@"senderHash"];
                 // Should add some timestamp as well.
                 [token save];
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Setup Recipient" message:[NSString stringWithFormat:@"Please enter the recipient token %04d on the recipient's iPad.",random4digits] delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+                [alert show];
             }
         } else {
             // Log details of the failure

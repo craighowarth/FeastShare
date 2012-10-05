@@ -11,5 +11,6 @@
 @property (nonatomic, strong) IBOutlet UITableView *recipientTableView;
 
 - (IBAction)buttonPressed:(UIButton *)sender;
+- (IBAction)addRecipentButtonPressed:(UIButton *)sender;
 
 @end
