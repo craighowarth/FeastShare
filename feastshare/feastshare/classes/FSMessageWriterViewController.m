@@ -43,7 +43,7 @@
 {
     [super viewDidLoad];
 	
-	[self.chosenImageView setImage:self.chosenImage];
+	//[self.chosenImageView setImage:self.chosenImage];
 	[self.messageTextView setText:self.chosenTweet];
 }
 
