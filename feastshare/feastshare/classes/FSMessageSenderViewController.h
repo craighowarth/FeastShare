@@ -6,7 +6,9 @@
 //  Copyright (c) 2012 Feast. All rights reserved.
 //
 
-@interface FSMessageSenderViewController : UIViewController
+@interface FSMessageSenderViewController : UIViewController{
+}
+@property (nonatomic, strong) IBOutlet UITextField *digits;
 
 - (IBAction)nextButtonPressed:(id)sender;
 

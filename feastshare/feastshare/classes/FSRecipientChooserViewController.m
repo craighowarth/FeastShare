@@ -26,29 +26,6 @@
     return self;
 }
 
--(void)setupLocalReceiver:(int)digits{
-    PFQuery *query = [PFQuery queryWithClassName:@"token"];
-    [query whereKey:@"digits" equalTo:[NSNumber numberWithInt:digits]];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (!error) {
-            if ([objects count]==1){
-                // Success. Found exactly one token. Save connection remotely.
-                PFObject* token = [objects objectAtIndex:0];
-                PFObject* connection = [PFObject objectWithClassName:@"connection"];
-                [connection setObject:[[PFUser currentUser] username] forKey:@"receiverHash"];
-                [connection setObject:[token objectForKey:@"senderHash"] forKey:@"senderHash"];
-                // Should add some timestamp as well.
-                [connection save];
-                // Delete token (Need to look up the API on how to do that).
-            }else{
-                // No token found. Present error message to user.
-            }
-        } else {
-            // Log details of the failure
-            NSLog(@"Error: %@ %@", error, [error userInfo]);
-        }
-    }];  
-}
 
 -(IBAction)addRecipientButtonPressed:(id)sender{
     [self setupRemoteReceiver];
