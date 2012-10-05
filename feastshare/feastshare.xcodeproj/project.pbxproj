@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37451F5E161F683B0032BAA3 /* unlock_message.png in Resources */ = {isa = PBXBuildFile; fileRef = 37451F5D161F683B0032BAA3 /* unlock_message.png */; };
 		37FECE5C161F2B3600BAA84F /* fry.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FECE5B161F2B3600BAA84F /* fry.png */; };
-		37FECE73161F64E300BAA84F /* unlock_message.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FECE72161F64E300BAA84F /* unlock_message.png */; };
 		4424729F161E28CE00756CC3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4424729E161E28CE00756CC3 /* UIKit.framework */; };
 		442472A1161E28CE00756CC3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 442472A0161E28CE00756CC3 /* Foundation.framework */; };
 		442472A3161E28CE00756CC3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 442472A2161E28CE00756CC3 /* CoreGraphics.framework */; };
@@ -79,8 +79,8 @@
 
 /* Begin PBXFileReference section */
 		3731DAD6161E390200055B11 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		37451F5D161F683B0032BAA3 /* unlock_message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unlock_message.png; sourceTree = "<group>"; };
 		37FECE5B161F2B3600BAA84F /* fry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fry.png; sourceTree = "<group>"; };
-		37FECE72161F64E300BAA84F /* unlock_message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unlock_message.png; sourceTree = "<group>"; };
 		4424729A161E28CE00756CC3 /* feastshare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = feastshare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4424729E161E28CE00756CC3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		442472A0161E28CE00756CC3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -295,10 +295,10 @@
 		44247311161F17FC00756CC3 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				37FECE72161F64E300BAA84F /* unlock_message.png */,
 				443F5816161F64A500405E23 /* minis_dog.jpg */,
 				443F5814161F5EF400405E23 /* 02_add_content_page.png */,
 				449F4F7C161F519F000CEA32 /* add_recipient.png */,
+				37451F5D161F683B0032BAA3 /* unlock_message.png */,
 				449F4F7D161F519F000CEA32 /* polaroids_image_01.png */,
 				449F4F7E161F519F000CEA32 /* polaroids_image_02.png */,
 				449F4F7F161F519F000CEA32 /* polaroids_image_03.png */,
@@ -450,8 +450,8 @@
 				449F4F8F161F519F000CEA32 /* title_make_album.png in Resources */,
 				443F5811161F5C5300405E23 /* SVProgressHUD.bundle in Resources */,
 				443F5815161F5EF500405E23 /* 02_add_content_page.png in Resources */,
-				37FECE73161F64E300BAA84F /* unlock_message.png in Resources */,
 				443F5817161F64A500405E23 /* minis_dog.jpg in Resources */,
+				37451F5E161F683B0032BAA3 /* unlock_message.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
