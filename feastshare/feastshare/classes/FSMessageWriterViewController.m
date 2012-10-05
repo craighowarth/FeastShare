@@ -31,7 +31,7 @@
     
     PFObject *post = [PFObject objectWithClassName:@"Post"];
     [post setObject:receiverHash forKey:@"receiverHash"];
-    [post setObject:[PFUser currentUser] forKey:@"senderHash"];
+    [post setObject:[[PFUser currentUser] username] forKey:@"senderHash"];
     [post setObject:message forKey:@"message"];
     [post setObject:imageFile forKey:@"image"];
     [post save];
@@ -51,6 +51,8 @@
 
 - (IBAction)nextButtonPressed:(id)sender
 {
+    // Dummy message to self. Need to use real data.
+    [self postImage:[UIImage imageNamed:@"fry.png"] withMessage:@"This is a test message" toReceiver:[[PFUser currentUser] username]];
 	[[NSNotificationCenter defaultCenter] postNotificationName:FSEvent_MessageWritten object:nil userInfo:nil];
 }
 

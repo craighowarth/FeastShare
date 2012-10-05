@@ -32,7 +32,8 @@
     }
     PFObject* post = [posts objectAtIndex:indexPath.row];
     cell.textLabel.text = [post objectForKey:@"message"];
-    cell.imageView.image = [UIImage imageWithData:[post objectForKey:@"image"]];
+    PFFile* file = [post objectForKey:@"image"];
+    cell.imageView.image = [UIImage imageWithData:[file getData]];
     return cell;
 }
 
@@ -50,10 +51,11 @@
 
 -(void)getListOfPosts{
     PFQuery *query = [PFQuery queryWithClassName:@"Post"];
-    [query whereKey:@"receiverHash" equalTo:[PFUser currentUser]];
+    [query whereKey:@"receiverHash" equalTo:[[PFUser currentUser] username]];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             // The find succeeded.
+            NSLog(@"Got %d posts",[objects count]);
             posts = objects;
             [tableview reloadData];
         } else {
