@@ -37,6 +37,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
+    return 10;
+}
+-(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
+    return [NSString stringWithFormat:@"%d",row];
+}
+-(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
+    return 4;
+}
+
+
 -(void)setupLocalReceiver:(int)digits{
     PFQuery *query = [PFQuery queryWithClassName:@"token"];
     [query whereKey:@"digits" equalTo:[NSNumber numberWithInt:digits]];
@@ -57,6 +68,10 @@
             }else{
                 NSLog(@"Token %d not found.",digits);
                 // No token found. Present error message to user.
+                
+                // For Demo:
+                //             Move on anyway.
+                [[NSNotificationCenter defaultCenter] postNotificationName:FSEvent_MessageSent object:nil userInfo:nil];
             }
         } else {
             // Log details of the failure
@@ -68,7 +83,12 @@
 
 - (IBAction)nextButtonPressed:(id)sender
 {
-    [self setupLocalReceiver:[self.digits.text intValue]];
+    int value = 0;
+    value += [self.picker selectedRowInComponent:3];
+    value += 10*[self.picker selectedRowInComponent:2];
+    value += 100*[self.picker selectedRowInComponent:1];
+    value += 1000*[self.picker selectedRowInComponent:0];
+    [self setupLocalReceiver:value];
 }
 
 @end
