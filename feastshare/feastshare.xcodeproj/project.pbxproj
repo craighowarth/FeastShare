@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		374145DB161F6D2A00FF32CA /* messagebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 374145DA161F6D2A00FF32CA /* messagebook.png */; };
 		37451F5E161F683B0032BAA3 /* unlock_message.png in Resources */ = {isa = PBXBuildFile; fileRef = 37451F5D161F683B0032BAA3 /* unlock_message.png */; };
 		37FECE5C161F2B3600BAA84F /* fry.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FECE5B161F2B3600BAA84F /* fry.png */; };
 		4424729F161E28CE00756CC3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4424729E161E28CE00756CC3 /* UIKit.framework */; };
@@ -82,6 +83,7 @@
 
 /* Begin PBXFileReference section */
 		3731DAD6161E390200055B11 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		374145DA161F6D2A00FF32CA /* messagebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = messagebook.png; sourceTree = "<group>"; };
 		37451F5D161F683B0032BAA3 /* unlock_message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unlock_message.png; sourceTree = "<group>"; };
 		37FECE5B161F2B3600BAA84F /* fry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fry.png; sourceTree = "<group>"; };
 		4424729A161E28CE00756CC3 /* feastshare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = feastshare.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -305,6 +307,7 @@
 				443F5827161F692000405E23 /* post_it.png */,
 				443F5828161F692000405E23 /* send.png */,
 				443F5816161F64A500405E23 /* minis_dog.jpg */,
+				374145DA161F6D2A00FF32CA /* messagebook.png */,
 				443F5814161F5EF400405E23 /* 02_add_content_page.png */,
 				449F4F7C161F519F000CEA32 /* add_recipient.png */,
 				37451F5D161F683B0032BAA3 /* unlock_message.png */,
@@ -464,6 +467,7 @@
 				443F5829161F692000405E23 /* make_album_dog_image.png in Resources */,
 				443F582A161F692000405E23 /* post_it.png in Resources */,
 				443F582B161F692000405E23 /* send.png in Resources */,
+				374145DB161F6D2A00FF32CA /* messagebook.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
