@@ -9,7 +9,7 @@
 #import "FSRecipientChooserViewController.h"
 #import "FSConstants.h"
 
-@interface FSRecipientChooserViewController () <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+@interface FSRecipientChooserViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (nonatomic, strong) NSArray *connections;
 
@@ -86,6 +86,7 @@
 
 -(void)getAllConnections
 {
+	NSLog(@"%@", [PFUser currentUser]);
     PFQuery *query = [PFQuery queryWithClassName:@"connections"];
     [query whereKey:@"senderHash" equalTo:[[PFUser currentUser] username]];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
@@ -105,9 +106,21 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 	
-	[self getAllConnections];
+	//[self getAllConnections];
 	
-	[self.recipientCollectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"recipientCell"];
+	UINib *cellNib = [UINib nibWithNibName:@"FSRecipientCell" bundle:nil];
+	[self.recipientCollectionView registerNib:cellNib forCellWithReuseIdentifier:@"recipientCell"];
+	
+//	[self.recipientCollectionView registerClass:[FSRecipientCollectionViewCell class] forCellWithReuseIdentifier:@"recipientCell"];
+	
+	UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+	[flowLayout setItemSize:CGSizeMake(366, 396)];
+	[flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
+	[self.recipientCollectionView setCollectionViewLayout:flowLayout];
+	
+	[self.recipientCollectionView setDelegate:self];
+	[self.recipientCollectionView setDataSource:self];
+	
 	[self.recipientCollectionView reloadData];
 }
 
@@ -118,15 +131,15 @@
 }
 
 
-- (void)buttonPressed:(UIButton *)sender
-{
-	[[NSNotificationCenter defaultCenter] postNotificationName:FSEvent_RecipientChosen object:nil userInfo:[NSDictionary dictionaryWithObject:@"69wq78itgjipafmua8yzt7s8g" forKey:@"receievrHash"]];
-}
+//- (void)buttonPressed:(UIButton *)sender
+//{
+//	[[NSNotificationCenter defaultCenter] postNotificationName:FSEvent_RecipientChosen object:nil userInfo:[NSDictionary dictionaryWithObject:@"69wq78itgjipafmua8yzt7s8g" forKey:@"receievrHash"]];
+//}
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-	return [self.connections count];
+	return 5; //[self.connections count];
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
@@ -137,28 +150,30 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)cv cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
 	UICollectionViewCell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"recipientCell" forIndexPath:indexPath];
-	cell.backgroundColor = [UIColor whiteColor];
+//	cell.backgroundColor = [UIColor whiteColor];
 	
+//	cell.imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"fry.png"]];
+//	[cell setFrame:CGRectMake(0, 0, 300, 300)];
 	
 	return cell;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-	PFObject *receiver = [self.connections objectAtIndex:indexPath.row];
-    NSDictionary *recieverHash = [NSDictionary dictionaryWithObject:[receiver objectForKey:@"receiverHash"] forKey:@"receievrHash"];
-
-	[[NSNotificationCenter defaultCenter] postNotificationName:FSEvent_RecipientChosen object:nil userInfo:recieverHash];
+//	PFObject *receiver = [self.connections objectAtIndex:indexPath.row];
+//    NSDictionary *recieverHash = [NSDictionary dictionaryWithObject:[receiver objectForKey:@"receiverHash"] forKey:@"receievrHash"];
+//
+//	[[NSNotificationCenter defaultCenter] postNotificationName:FSEvent_RecipientChosen object:nil userInfo:recieverHash];
 }
 
-- (CGSize)collectionView:(UICollectionView *)cv layout:(UICollectionViewLayout *)cvl sizeForItemAtIndexPath:(NSIndexPath *)indexPath
-{
-	return CGSizeMake(300, 300);
-}
-
-- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
-{
-	return UIEdgeInsetsMake(50, 20, 50, 20);
-}
+//- (CGSize)collectionView:(UICollectionView *)cv layout:(UICollectionViewLayout *)cvl sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+//{
+//	return CGSizeMake(300, 300);
+//}
+//
+//- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+//{
+//	return UIEdgeInsetsMake(50, 20, 50, 20);
+//}
 
 @end
