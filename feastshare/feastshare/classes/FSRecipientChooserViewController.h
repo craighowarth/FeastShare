@@ -8,9 +8,8 @@
 
 @interface FSRecipientChooserViewController : UIViewController
 
-@property (nonatomic, strong) IBOutlet UITableView *recipientTableView;
+@property (nonatomic, strong) IBOutlet UICollectionView *recipientCollectionView;
 
-- (IBAction)buttonPressed:(UIButton *)sender;
 - (IBAction)addRecipentButtonPressed:(UIButton *)sender;
 
 @end

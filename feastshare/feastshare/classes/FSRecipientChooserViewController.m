@@ -9,7 +9,9 @@
 #import "FSRecipientChooserViewController.h"
 #import "FSConstants.h"
 
-@interface FSRecipientChooserViewController () 
+@interface FSRecipientChooserViewController () <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+
+@property (nonatomic, strong) NSArray *connections;
 
 @end
 
@@ -79,13 +81,15 @@
     }];
 }
 
--(void)getAllReceivers{
+-(void)getAllConnections
+{
     PFQuery *query = [PFQuery queryWithClassName:@"connections"];
     [query whereKey:@"senderHash" equalTo:[[PFUser currentUser] username]];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             // All previsouly configured receivers are in the objects array. Display to user.
-            NSLog(@"Successfully retrieved %d receivers.", objects.count);
+			NSLog(@"Successfully retrieved %d connections.", objects.count);
+            self.connections = objects;
         } else {
             // Log details of the failure
             NSLog(@"Error: %@ %@", error, [error userInfo]);
@@ -98,6 +102,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 	
+	[self getAllConnections];
+	
+	[self.recipientCollectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"recipientCell"];
+	[self.recipientCollectionView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -112,5 +120,42 @@
 	[[NSNotificationCenter defaultCenter] postNotificationName:FSEvent_RecipientChosen object:nil userInfo:[NSDictionary dictionaryWithObject:@"69wq78itgjipafmua8yzt7s8g" forKey:@"receievrHash"]];
 }
 
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+	return [self.connections count];
+}
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+	return 1;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)cv cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+	UICollectionViewCell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"recipientCell" forIndexPath:indexPath];
+	cell.backgroundColor = [UIColor whiteColor];
+	
+	
+	return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+	PFObject *receiver = [self.connections objectAtIndex:indexPath.row];
+    NSDictionary *recieverHash = [NSDictionary dictionaryWithObject:[receiver objectForKey:@"receiverHash"] forKey:@"receievrHash"];
+
+	[[NSNotificationCenter defaultCenter] postNotificationName:FSEvent_RecipientChosen object:nil userInfo:recieverHash];
+}
+
+- (CGSize)collectionView:(UICollectionView *)cv layout:(UICollectionViewLayout *)cvl sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+	return CGSizeMake(300, 300);
+}
+
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+{
+	return UIEdgeInsetsMake(50, 20, 50, 20);
+}
 
 @end
