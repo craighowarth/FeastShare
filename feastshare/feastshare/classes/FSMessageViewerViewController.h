@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FSMessageViewerViewController : UIViewController
+@interface FSMessageViewerViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>{
+    IBOutlet UITableView* tableview;
+}
 
 @end
