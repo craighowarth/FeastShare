@@ -109,7 +109,7 @@
 
 - (void)buttonPressed:(UIButton *)sender
 {
-	[[NSNotificationCenter defaultCenter] postNotificationName:FSEvent_RecipientChosen object:nil userInfo:nil];
+	[[NSNotificationCenter defaultCenter] postNotificationName:FSEvent_RecipientChosen object:nil userInfo:[NSDictionary dictionaryWithObject:@"69wq78itgjipafmua8yzt7s8g" forKey:@"receievrHash"]];
 }
 
 
