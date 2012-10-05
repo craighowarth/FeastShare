@@ -171,10 +171,10 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-//	PFObject *receiver = [self.connections objectAtIndex:indexPath.row];
-//    NSDictionary *recieverHash = [NSDictionary dictionaryWithObject:[receiver objectForKey:@"receiverHash"] forKey:@"receievrHash"];
-//
-//	[[NSNotificationCenter defaultCenter] postNotificationName:FSEvent_RecipientChosen object:nil userInfo:recieverHash];
+	PFObject *receiver = [self.connections objectAtIndex:indexPath.row];
+    NSDictionary *recieverHash = [NSDictionary dictionaryWithObject:[receiver objectForKey:@"receiverHash"] forKey:@"receievrHash"];
+
+	[[NSNotificationCenter defaultCenter] postNotificationName:FSEvent_RecipientChosen object:nil userInfo:recieverHash];
 }
 
 //- (CGSize)collectionView:(UICollectionView *)cv layout:(UICollectionViewLayout *)cvl sizeForItemAtIndexPath:(NSIndexPath *)indexPath
