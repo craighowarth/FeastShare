@@ -24,6 +24,18 @@
     return self;
 }
 
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSString* CellIdentifier = @"ViewerCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    PFObject* post = [posts objectAtIndex:indexPath.row];
+    cell.textLabel.text = [post objectForKey:@"message"];
+    cell.imageView.image = [UIImage imageWithData:[post objectForKey:@"image"]];
+    return cell;
+}
+
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
 }
