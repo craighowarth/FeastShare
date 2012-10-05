@@ -9,7 +9,9 @@
 #import "FSRecipientChooserViewController.h"
 #import "FSConstants.h"
 
-@interface FSRecipientChooserViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface FSRecipientChooserViewController () <UITableViewDelegate, UITableViewDataSource>{
+    NSArray* connections;
+}
 
 @end
 
@@ -73,13 +75,15 @@
     }];
 }
 
--(void)getAllReceivers{
+-(void)getAllConnections{
     PFQuery *query = [PFQuery queryWithClassName:@"connections"];
     [query whereKey:@"senderHash" equalTo:[[PFUser currentUser] username]];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             // All previsouly configured receivers are in the objects array. Display to user.
-            NSLog(@"Successfully retrieved %d receivers.", objects.count);
+            NSLog(@"Successfully retrieved %d connections.", objects.count);
+            connections = objects;
+            [self.recipientTableView reloadData];
         } else {
             // Log details of the failure
             NSLog(@"Error: %@ %@", error, [error userInfo]);
@@ -91,9 +95,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-	
 	[self.recipientTableView setDelegate:self];
 	[self.recipientTableView setDataSource:self];
+    [self getAllConnections];
 }
 
 - (void)didReceiveMemoryWarning
@@ -104,7 +108,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return [connections count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -115,8 +119,9 @@
 		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cellIdentifier"];
 	}
     
-	[[cell textLabel] setText:[NSString stringWithFormat:@"%d",[indexPath row]]];
-    
+    PFObject* receiver = [connections objectAtIndex:indexPath.row];
+    cell.textLabel.text = [receiver objectForKey:@"receiverHash"];
+
     return cell;
 }
 
