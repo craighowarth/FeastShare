@@ -38,8 +38,8 @@
 
 - (IBAction)nextButtonPressed:(id)sender
 {
-	self.chosenImage = [UIImage imageNamed:@"molly_me.jpeg"];
-	self.chosenTweet = @"I just had dinner at Per Se!";
+	self.chosenImage = [UIImage imageNamed:@"minis_dog.jpg"];
+	self.chosenTweet = @"Second day at hackathon at #thefeast lets keep on designing http://instagram.com/p/QZ85N-pg6w/";
 	
 	[[NSNotificationCenter defaultCenter] postNotificationName:FSEvent_ContentChosen object:nil userInfo:nil];
 	
